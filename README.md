@@ -136,7 +136,7 @@ provider_model = llama3.2:1b
 provider_server_address = 127.0.0.1:11434
 
 Generate API Key from https://ai.google.dev/gemini-api/docs/api-key
-Place your API Key's value in .env file, setting it to GEMINI_API_KEY
+Place your API Key's value in .env file, setting it to GEMINI_API_KEY'
 
 	4.	Run:
 
@@ -227,7 +227,7 @@ You need to navigate to download the latest version:
 
 https://developer.chrome.com/docs/chromedriver/downloads
 
-If you're using Chrome version 115 or newer go to:
+If you're using Chrome version 115 or newer go to':
 
 https://googlechromelabs.github.io/chrome-for-testing/
 
