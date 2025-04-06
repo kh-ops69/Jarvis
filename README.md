@@ -84,7 +84,7 @@ graph TD
 * **Confirmation Step:** The user is explicitly asked for confirmation before proceeding with a plan that involves external web search, providing transparency and control.
 
 A very basic architectural overview is provided below:
-(./media/First_arch.jpg)
+(media/First_arch.jpg)
 
 ---
 
