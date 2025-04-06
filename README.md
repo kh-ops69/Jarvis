@@ -54,25 +54,6 @@ graph TD
     F -- No Relevant Data --> J;
 ```
 
-```mermaid
-graph TD
-    A[User Query] --> B{Local Model (Ollama API)};
-    B -- Simple Query --> C[Bash Interpreter];
-    B -- Complex Query --> D[Planner Agent];
-    D -- Initial Plan --> E{Proceed with this plan?};
-    E -- Yes --> F[Gemini API (Web Search)];
-    F -- Relevant Data --> G{Route Data};
-    G -- Code Execution Required --> H[Code Interpreter];
-    G -- File Processing Required --> I[File Interpreter];
-    G -- Bash Command Required --> C;
-    E -- No --> D;
-    D -- Revised Plan --> E;
-    C -- Result --> J[User Response];
-    H -- Result --> J;
-    I -- Result --> J;
-    F -- No Relevant Data --> J;
-```
-
 ---
 
 ## Key Architectural Decisions
@@ -84,7 +65,7 @@ graph TD
 * **Confirmation Step:** The user is explicitly asked for confirmation before proceeding with a plan that involves external web search, providing transparency and control.
 
 A very basic architectural overview is provided below:
-(media/First_arch.jpg)
+![Basic architecture](./media/First_arch.jpg)
 
 ---
 
