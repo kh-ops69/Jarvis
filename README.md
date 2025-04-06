@@ -115,9 +115,7 @@ Manual:
 
 pip install -r requirements.txt
 
-
-
-⸻
+---
 
 🧠 Running the Assistant
 
@@ -166,10 +164,10 @@ Then run:
 
 sudo ./start_services.sh
 python3 main.py
+```
+---
 
-⸻
-
-🎙️ Voice Activation
+## 🎙️ Voice Activation
 	1.	In config.ini:
 
 listen = True
@@ -178,9 +176,9 @@ agent_name = Friday
 	2.	Trigger by saying the agent name aloud, then speak your query.
 	3.	End with phrases like “do it”, “please”, “run”, etc.
 
-⸻
+---
 
-💻 Example Commands
+## 💻 Example Commands
 
 Coding / Terminal
 	•	Write a snake game in Python
@@ -199,9 +197,9 @@ Casual
 	•	Who is the president of South Korea?
 	•	Should I take creatine before or after a workout?
 
-⸻
+---
 
-🌐 Providers Overview
+## 🌐 Providers Overview
 
 Provider	Local?	Description
 ollama	✅	Run models locally
@@ -213,9 +211,9 @@ huggingface	❌	Hugging Face Inference API
 
 Update config.ini accordingly.
 
-⸻
+---
 
-🧪 Known Issues
+#### 🧪 Known Issues
 
 
 Exception: Failed to initialize browser: Message: session not created: This version of ChromeDriver only supports Chrome version 113
@@ -233,28 +231,36 @@ https://googlechromelabs.github.io/chrome-for-testing/
 
 And download the chromedriver version matching your OS.
 
-
-⸻
-
-🔧 Issues
-	1.	Model Limitations:
+Model Limitations:
 The current system uses a smaller LLaMA 3.2 model with approximately 1 billion parameters. While this allows for faster inference, it significantly reduces accuracy and instruction-following ability. It often requires multiple prompts (trial and error) to steer the model in the right direction.
 Upgrade to a larger model (≥14B parameters) if hardware permits, to improve response quality and reduce prompt iterations.
-	2.	Error Handling:
+
+
+Error Handling:
 Due to the smaller model, many edge cases throw unexpected errors that cause the agent or the system to fail.
 Robust error handling needs to be added throughout the agent’s workflow.
-	3.	Command Execution Inconsistencies:
+
+
+Command Execution Inconsistencies:
 Commands generated for terminal or file operations sometimes do not execute as expected because of inconsistencies in code generation or lack of context.
 More rigorous testing and validation are required, especially when using smaller models, to ensure commands are reliable.
-	4.	Missing Step-by-Step Validation:
+
+
+Missing Step-by-Step Validation:
 There is no validation at intermediate steps—such as when the plan is generated, commands are executed, or intermediate outputs are received.
 Add checkpoint validations throughout the agent’s reasoning and execution pipeline.
-	5.	Poor Logical Flow & Redundant Code:
+
+
+Poor Logical Flow & Redundant Code:
 The codebase contains redundant files and testing modules, making the overall flow cluttered and confusing.
 Refactoring required for better clarity, modularization, and readability.
-	6.	Unreliable Speech-to-Text Functionality:
+
+
+Unreliable Speech-to-Text Functionality:
 Speech input functionality is present but not thoroughly tested, and may not work as expected in all environments.
-	7.	Cross-Platform Compatibility Not Verified:
+
+
+Cross-Platform Compatibility Not Verified:
 The system has only been tested on a Mac M1 with 8GB RAM. Code exists for Windows and Linux, but platform-specific compatibility is unverified.
 Thorough testing on Windows and Linux environments is necessary.
 
